@@ -1,0 +1,170 @@
+/*============================================BODY=================================*/
+
+/*buat warna background si navbar*/
+.navbar {
+	background-color: #00B1AA;
+	font-family: 'Mukta Malar', sans-serif;
+	font-weight:bold;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+/*buat ganti font di dropdown navbar about*/
+.dropdown-item {
+	font-family: 'Mukta Malar', sans-serif;
+	font-weight:bold;
+	font-size: 10.5pt;
+}
+
+/*buat efek shadow muncul pas hover*/
+.navbar:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/*buat warna background*/
+.bg {
+	background-color:#BFBED4;
+}
+
+/*buat ganti jenis font didalam jumbotron*/
+.jumbotron {
+	font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+/*buat ganti warna header modal login dan sign up*/
+.modal-header {
+	background-color: #00B1AA;
+}
+
+/*buat ganti warna footer modal login sign up*/
+.modal-footer {
+	background-color: #00B1AA;
+}
+
+/*untuk ubah warna horizontal line di konten*/
+.samping1 {
+	border-color: black;
+}
+
+/*untuk ubah warna horizontal line di konten*/
+.samping2 {
+	border-color: black;
+}
+
+/*justifiy content intro*/
+#intro p {
+	text-align: justify;
+}
+
+/*ngatur gambar creator*/
+#gambar-creator img{
+	height: 185px;
+	width: 185px;
+}
+
+/*ngasih font buat paragraph di bawah gambar creator*/
+#gambar-creator {
+	font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+/*buat ngasil tebel tulisan creator*/
+#gambar-creator p{
+	font-weight: bold;
+}
+
+/*buat ngasih tebel hr sensei*/
+#sensei hr{
+	border-color: black;
+	width: 700px;
+}
+
+/*ngatur kata katasensei*/
+#sensei {
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+/*buat ngatur gambar sensei*/
+#gambar-sensei1 {
+	font-family: 'Marvel', sans-serif;
+	color:dark;
+}
+.bangalvin img{
+	height: 150px;
+	width: 150px;
+	font-weight: bold;
+	margin-right: 80px;
+}
+.s-alvin{
+	padding-left: 180px;
+	padding-top: 170px;
+	font-weight: bold;
+}
+.quote-alvin p{
+	padding-left: 70px;
+	font-size: 10.5pt;
+	font-family: 'Courgette', cursive;
+}
+
+.banghikmat img{
+	height: 150px;
+	width: 150px;
+}
+.s-hikmat{
+	padding-left: 153px;
+	padding-top: 20px;
+	font-weight: bold;
+}
+.quote-hikmat p{
+	padding-left: 49px;
+	font-size: 10.5pt;
+	font-family: 'Courgette', cursive;
+}
+.mbasandra img{
+	height: 150px;
+	width: 150px;
+	margin-left: 70px;
+}
+.s-sandra{
+	padding-left: 122px;
+	padding-top: 169px;
+	font-weight: bold;
+}
+.quote-sandra p{
+	padding-left: 90px;
+	font-size: 10.5pt;
+	font-family: 'Courgette', cursive;
+}
+
+/*CONTACT Me*/
+.card {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);	
+}
+#contact hr{
+	border-color: black;
+	width: 700px;
+}
+.medsos a {
+	text-decoration: none;
+	list-style: none;
+	color:black;
+}
+
+/*============================================FOOTER=================================*/
+#foot {
+	background-color: #00B1AA;
+	font-family: 'Mukta Malar', sans-serif;
+	font-weight:thin;	
+	color: white;
+	font-size: 11pt;
+	padding-top: 30px;
+}
+
+/*ngatur ukuran gambar logo makers di footer*/
+#foot img{
+ 	width: 250px;
+ 	height: 30px;
+}

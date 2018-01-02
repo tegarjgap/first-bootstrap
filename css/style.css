@@ -1,0 +1,958 @@
+@media screen and (min-width: 660px) {
+  body {
+    	background-color:blue;
+  }/*================BAGIAN HEADER==============*/
+
+/*bikin dulu flex parent buat navbar*/
+header #navbar{
+	display: flex;
+	position: fixed;
+	background-color: #00B1AA;
+	font-family: 'Mukta Malar', sans-serif;
+	overflow: auto;
+	justify-content: space-between;
+	left: 0px;
+	right: 0px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#navbar:hover	{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+/*ini buat anaknya yang dipakai di menu sebelah kiri*/
+.navbar-kiri ul li{
+   padding:5px;
+   list-style: none;
+   margin-right: 30px;
+   display: inline-block; 
+}
+
+/*buat ilangin garis bawah link*/
+.navbar-kiri a{
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   font-size: 13pt;
+}
+
+/*buat anaknya yang dipakai sebelah kanan*/
+.navbar-kanan ul li{
+   padding:5px;
+   list-style: none;
+   margin-right: 30px;
+   display: inline-block; 
+   justify-content: flex-end;
+}
+
+/*buat ngilangin garis bawah link*/
+.navbar-kanan a{
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   font-size: 13pt;
+}
+.navbar-kanan button{
+		font-family: 'Mukta Malar', sans-serif;
+		font-weight: bold;
+}
+
+/*ubah warna bg sign in*/
+.navbar-kanan .sgnin{
+	background-color: #39B217;
+}
+
+/*ubah warna bg sign up*/
+.navbar-kanan .sgnup{
+	background-color: #EE7B10;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px;
+    border:none;
+    cursor: pointer;
+    width: 15%;
+}
+input[type=button]{
+	background-color: #4CAF50;
+    color: white;
+    padding: 6px 20px;
+    /*margin: 8px 0;*/
+    border:none;
+    cursor: pointer;
+    width: 15%;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: 15%;
+    padding: 7px 15px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color:#197ACC;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+.effect a{
+	display: inline-block;
+	overflow: hidden
+}
+
+/*=================== BAGIAN CONTENT =====================*/
+
+/*==================SECTION================*/
+/*bikin flex orang tua pertama di body*/
+#body{
+	display: flex;
+	background-color: #BFBED4;
+	padding: 100px; 
+	justify-content: center;
+	color: white;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+}
+
+/*untuk bagian slide show*/
+.mySlides{
+	display: none;
+}
+
+/*untuk bagian pembukaan kontent*/
+#theme{
+	display: flex;
+	padding:80px;
+	font-family: 'Mukta Malar', sans-serif;
+	justify-content: center;
+	color: black;
+}
+
+/*buat ngasih judul tema*/
+.thema h2{
+	font-weight: bold;
+	font-size: 27pt;
+	text-align:center;
+}
+
+/*buat garis horizontal*/
+.thema hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 600px;
+    border-color: black;
+}
+
+/*buat walpapper riddle*/
+
+/*ini parent si riddle*/
+#riddle{
+	display: flex;
+	padding-left: 50px;	
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+}
+
+/*ini anak si ridle*/
+.riddle1 img{
+	border-radius: 25px;
+    width: 340px;
+    height: 200px;
+  	justify-content: left;
+
+}
+
+/*ini buat paragraph si riddle*/
+.desk-riddle{
+	text-align: justify;
+	padding-left: 100px;
+	padding-right: 100px;
+	color: black;	
+}
+
+/*ini parent di detektif*/
+#case{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 50px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;	
+}
+
+/*ini buat anaknya detektif*/
+.case1 img{
+	border-radius: 25px;
+    width: 340px;
+    height: 200px;
+    justify-content: right;
+}
+
+/*ini buat deksripsi di detektif*/
+.desk-case{
+	text-align: justify;
+	padding-left: 100px;
+	padding-right: 100px;
+	color: black;	
+}
+
+/*ini buat parent si detektif*/
+#programming{
+	display: flex;
+	padding-left: 50px;	
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+}
+
+/*ini buat anaknya si detektif*/
+.prog img{
+ 	border-radius: 25px;
+    width: 340px;
+    height: 200px;
+  	justify-content: left;  
+}
+
+/*ini buat dekripsi si detektif*/
+.desk-prog{
+	text-align: justify;
+	padding-left: 100px;
+	padding-right: 100px;
+	color: black;	
+}
+
+/*ini buat warna abu abu di konten kedua*/
+#body2{
+	background-color: #BFBED4;
+	color: white;
+	padding:60px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	word-spacing: 10px;
+	padding-bottom: 150px;
+}
+
+/*ini untuk konten epilog about html*/
+.konten-1 h2{
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+	font-weight: bold;
+	padding-top: 50px;
+	color: black;
+}
+
+/*buat paragraph epilog*/
+.konten-1 p{
+	text-align: justify;
+	padding-right: 270px;
+	padding-left: 270px;
+	word-spacing: 10px;
+	color: black;
+}
+
+/*buat hr di bawah epilog*/
+.konten-1 hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 700px;
+    border-color:black;
+}
+
+/*buat konten author*/
+#body3{
+	background-color: #BFBED4;
+	color: white;
+	padding:60px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	padding-bottom: 150px;
+}
+
+/*ini untuk konten author about html*/
+.konten-2 h2{
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+	font-weight: bold;
+	color: black;
+}
+
+/*buat gambar author*/
+.konten-2 img{
+	border-radius: 60%;
+    width: 150px;
+    height: 160px;
+  	justify-content: left;
+  	margin-left: 530px;
+  	padding-top: 10px;
+}
+
+/*buat paragraph author*/
+.konten-2 p{
+	text-align: justify;
+	padding-right: 270px;
+	padding-left: 270px;
+	word-spacing: 9px;
+	color: black;
+}
+
+
+/*buat hr di bawah author*/
+.konten-2 hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 700px;
+    border-color: black;
+}
+
+#horizontal{
+	background-color: #6DB0D2;
+	display: flex;
+	justify-content: center;
+	font-family: 'Mukta Malar', sans-serif;
+	color: white;
+	text-align: center;
+}
+.hr hr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+    width: 700px;
+    border-color: black;
+    border-width: 2px;
+}
+
+/*buat nebelin kata our sensei*/
+.hr h2{
+	font-weight: bold;
+	color: black;
+}
+
+/*buat konten sensei*/
+#body4{
+	background-color: #BFBED4;
+	display: flex;
+	color: white;
+	padding-top:70px;
+	padding-bottom: 200px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: space-around;
+}
+
+/*ini untuk konten sensei about html*/
+.sensei1 h3{
+	text-align: center;
+	padding-left: 330px;
+	font-weight: bold;
+	color: black;
+}
+
+/*buat gambar sensei*/
+.sensei1 img{
+	border-radius: 200px;
+    width: 162px;
+    height: 170px;
+  	margin-left: 350px;
+  	padding-top: 10px;
+}
+
+/*buat paragraph sensei*/
+.sensei1 p{
+	text-align: center;
+	padding-left: 340px;	
+	font-size: 12pt;
+	color: black;
+}
+
+
+/*buat hr di bawah sensei*/
+.sensei1 hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-left: 340px;
+    border-style: inset;
+    border-width: 1px;
+    width: 180px;
+    border-color: black;
+}
+
+/*ini untuk konten sensei about html*/
+.sensei2 h3{
+	text-align: center;
+	padding-right: 390px;
+	font-weight: bold;
+	color: black;
+}
+
+/*buat gambar sensei*/
+.sensei2 img{
+	border-radius: 200px;
+    width: 162px;
+    height: 170px;
+  	margin-right: 100px;
+  	padding-top: 10px;
+}
+
+/*buat paragraph sensei*/
+.sensei2 p{
+	text-align: center;
+	padding-right: 400px;	
+	font-size: 12pt;
+	color: black;
+}
+
+
+/*buat hr di bawah sensei*/
+.sensei2 hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-left: 0px;
+    border-style: inset;
+    border-width: 1px;
+    width: 180px;
+    border-color: black;
+
+}
+
+/*buat logo makers*/
+#body5{
+	background-color: #6DB0D2;
+	display: flex;
+	color: white;
+	padding-top:10px;
+	padding-bottom: 100px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+}
+
+/*pengaturan tulisan headingnya*/
+.makers h3{
+	text-align: center;
+	padding-right: 0px;
+	padding-bottom: 40px;
+	font-weight: bold; 
+	color: black;
+}
+
+/*ngatur gambar logo*/
+.makers img{
+    width:350px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+/*buat card box contact*/
+#myname {
+	background-color: #6DB0D2;
+	display: flex;
+	color: white;
+	padding-top:130px;
+	padding-bottom:100px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+	
+}
+
+#myname :hover {
+	box-shadow: 0 12px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.myname1 img {
+	width: 200px;
+	height: 200px;
+ 	/*transition: all 0.3s cubic-bezier(.25,.8,.25,1);*/
+}
+.myname1 {
+	  max-width: 300px;
+	  margin: auto;
+	  text-align: center;
+	  background-color: #384245;
+}
+
+.myname1 a{
+	  text-decoration: none;
+	  font-size: 22px;
+	  color: black;
+}
+
+
+/*buat navbar konten*/
+header #navbar-baru{
+	display: flex;
+	position: fixed;
+	background-color: #00B1AA;
+	font-family: 'Mukta Malar', sans-serif;
+	overflow: auto;
+	justify-content: space-around;
+	left: 0px;
+	right: 0px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#navbar-baru:hover	{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.navbar-kiri-baru ul li{
+   padding:5px;
+   list-style: none;
+   margin-right: 30px;
+   display: inline-block; 
+}
+
+.navbar-kiri-baru a{
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   font-size: 13pt;
+}
+/*buat card timeline*/
+#card-content {
+	background-color: #BFBED4;
+	display: flex;
+	padding-top: 95px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+	
+}
+
+.w3-panel {
+	background-color:#556673 ;
+	color: white;
+	width: 52%;
+	height: 29px;
+	padding-right: 35px;
+	padding-left: 35px;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+
+/*buat card box parent pertama*/
+#card-content1 {
+	background-color: #BFBED4;
+	display: flex;
+	padding-top: 20px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+	
+}
+
+/*buat card box anak-anaknya*/
+.w3-panel1 {
+	background-color: #A8D1D9;
+	color: black;
+	width: 52%;
+	height: 300px;
+	padding-right: 35px;
+	padding-left: 35px;
+	text-align: justify;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.w3-panel1:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.w3-panel1 a {
+	text-decoration: none;
+}
+
+.w3-panel1 button{
+	background-color: #4CAF50;
+	margin-left: 86%;
+    margin-top: 60px;
+}
+.w3-panel1 video{
+	display: block;
+	margin: 0 auto;
+}
+
+/*card box kedua*/
+#card-content2 {
+	background-color: #BFBED4;
+	display: flex;
+	padding-top: 60px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+}
+
+.w3-panel2 {
+	background-color: #A8D1D9;
+	color: black;
+	width: 52%;
+	height: 300px;
+	padding-right: 35px;
+	padding-left: 35px;
+	text-align: justify;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.w3-panel2:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.w3-panel2 a {
+	text-decoration: none;
+}
+
+.w3-panel2 button{
+	background-color: #4CAF50;
+	margin-left: 86%;
+    margin-top: 60px;
+}
+.w3-panel2 video{
+	display: block;
+	margin: 0 auto;
+}
+.w3-panel3 video{
+	display: block;
+	margin: 0 auto;
+}
+
+
+/*card box ketiga*/
+#card-content3 {
+	background-color: #BFBED4;
+	display: flex;
+	padding-top: 60px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+}
+
+.w3-panel3 {
+	background-color: #A8D1D9;
+	color: black;
+	width: 52%;
+	height: 300px;
+	padding-right: 35px;
+	padding-left: 35px;
+	text-align: justify;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.w3-panel3:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.w3-panel3 a {
+	text-decoration: none;
+}
+
+.w3-panel3 button{
+	background-color: #4CAF50;
+	margin-left: 86%;
+    margin-top: 60px;
+}
+
+
+/*buat card break*/
+#card-break {
+	background-color: #BFBED4;
+	display: flex;
+	padding-top: 95px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+	
+}
+
+.w3-panel-break {
+	background-color:#556673 ;
+	color: white;
+	width: 52%;
+	height: 29px;
+	padding-right: 35px;
+	padding-left: 35px;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+
+/*buat card box parent pertama*/
+#card-break1 {
+	background-color: #BFBED4;
+	display: flex;
+	padding-top: 20px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+	
+}
+
+/*buat card box anak-anaknya*/
+.w3-panel-break1 {
+	background-color: #ACCEE8;
+	color: black;
+	width: 15%;
+	height: 50px;
+	padding-right: 50px;
+	padding-left: 50px;
+	margin-right: 60px;
+	margin-left: 65px;
+	text-align: justify;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.w3-panel-break1:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.w3-panel-break1 a {
+	text-decoration: none;
+}
+
+
+/*card box kedua*/
+
+.w3-panel2-break2 {
+	background-color: #ACCEE8;
+	color: black;
+	width: 15%;
+	height: 50px;
+	padding-right: 35px;
+	padding-left: 35px;
+	margin-left: 0px;
+	margin-right: 50px;
+	text-align: justify;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.w3-panel2-break2:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.w3-panel2-break2 a {
+	text-decoration: none;
+}
+
+
+/*card box ketiga*/
+
+.w3-panel3-break3 {
+	background-color: #ACCEE8;
+	color: black;
+	width: 15%;
+	height: 50px;
+	padding-right: 35px;
+	padding-left: 100px;
+	margin-right: 35px;
+	margin-left: 0px;
+	text-align: justify;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.w3-panel3-break3:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.w3-panel3-break3 a {
+	text-decoration: none;
+}
+
+
+/*buat konten card break*/
+#card-break-content {
+	background-color: #BFBED4;
+	display: flex;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	font-family: 'Mukta Malar', sans-serif;
+	font-size: 13pt;
+	justify-content: center;
+	
+}
+/*buat anak anak si konten card break*/
+.w3-panel-content {
+	background-color:#ACCEE8 ;
+	color: white;
+	width: 52%;
+	height: 29px;
+	padding-right: 35px;
+	padding-left: 35px;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== FOOTER ===============*/
+/*ini orang tua dari footer*/
+footer #copyright{
+	display: flex;
+	flex-direction: row;
+	background-color: #197ACC;
+	font-family: 'Mukta Malar', sans-serif;
+	overflow: auto;
+	justify-content: center;
+	padding: 25px;
+	font-size: 9pt;
+}
+
+/*buat ilangin garis bawah di link */
+#copyright a{
+		text-decoration: none;
+}
+
+/*ini buat copyright*/
+.copy{
+	text-align: center;
+	color: white;
+	font-size: 13pt;
+}
+
